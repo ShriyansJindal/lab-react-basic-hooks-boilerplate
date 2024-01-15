@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { ToggleTheme } from "../App";
-// import Usestate from './Usestate';
 
 function Task() {
   const [count, setCount] = useState(0);
@@ -22,17 +21,16 @@ function Task() {
   let handlelike = () => {
     setCount(count + 1);
   };
-  let handleContent = () => {
-    setContent(!Content);
-    console.log(Content);
-  };
+  // let handleContent = () => {
+  //   setContent(!Content);
+  //   // console.log(Content);
+  // };
   return (
     <div className="Container" style={themeStyle}>
-      {/* This is made by Kalvium */}
       {Content &&
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore pariatur voluptate provident expedita quaerat, ut quo neque? Assumenda saepe quasi consequuntur, voluptas architecto dolores quos! Pariatur animi accusamus in voluptate aperiam itaque maiores? Cum dolor amet nobis eius iusto nesciunt minus nemo, illo rerum magnam expedita velit ex nisi quaerat?"}
         <br />
-      <button style={{margin:"10px"}} onClick={handleContent}>Content</button>
+      <button style={{margin:"10px"}} onClick={()=>setContent(!Content)}>Content</button>
       <h3>{count}</h3>
       <button onClick={handlelike}>Like</button>
     </div>
